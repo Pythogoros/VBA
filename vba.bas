@@ -31,3 +31,26 @@ Sub CellReferencing()
 End Sub
 
 
+'Ranges can be used instead of individual cells - ALWAYS BETTER TO SPECIFY!
+
+Sub Bold()
+    [C1:D3].Font.Bold = True
+    Range("E4:F6").Font.Italic = True
+End Sub
+
+
+'Sheets can be accessed in different ways - ALWAYS BETTER TO SPECIFY!
+
+Sub Sheets()
+    ActiveSheet.[A1].Value = "A1"
+    Sheets("Sheet1").[A1].Font.Bold = True
+End Sub
+
+
+'Variables can be defined for latter usage
+
+Sub Italic()
+    Dim Range1 as Range
+    Set Range1 = Sheets("Sheet1").Range("A1:B3")
+    Range1.Font.Italic = True
+End Sub
