@@ -54,3 +54,21 @@ Sub Italic()
     Set Range1 = Sheets("Sheet1").Range("A1:B3")
     Range1.Font.Italic = True
 End Sub
+
+
+'Cells stand for all the cells in the current sheet
+
+Sub Cells()
+    Cells.EntireColumn.Autofit
+    Cells.EntireRow.Autofit
+    Cells.WrapText = True
+End Sub
+
+
+'User inputs are allowed
+
+Sub UserInput()
+    Dim sheets2add as Integer
+    sheets2add = InputBox("Enter number of sheets to add:")
+    Sheets.Add Count:=sheets2add, Before:=ActiveSheet
+End Sub
