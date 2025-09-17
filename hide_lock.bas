@@ -1,4 +1,4 @@
-Sub Hide_and_flat()
+Sub Hide_and_Lock()
 
     Dim wb As Workbook
     Set wb = ThisWorkbook
